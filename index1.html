@@ -1,0 +1,251 @@
+<!-- 
+    Main Link: https://getbootstrap.com/
+    Using The Bootstrap starting Template
+    Please notice that I used the file name "index.1.html" just as a demo
+    and we will have index2, ...
+    At the end we will add index.html
+ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- 
+    Bootstrap 4 or 5 is designed to be responsive to mobile devices. 
+    Mobile-first styles are part of the core framework.
+
+    To ensure proper rendering and touch zooming, add the following <meta> tag inside the <head> element
+
+    - The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+    - The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.
+   -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Bootstrap The Basic and Grid</title>
+    <style>
+        /* Using our custom CSS not BS */
+        div.row div {
+            background-color: wheat;
+            border: 1px solid brown;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    Containers are the most basic layout element in Bootstrap 
+    and are required when using BS default grid system. 
+
+    Containers are used to contain, pad, and (sometimes) center the content within them. 
+    While containers can be nested, most layouts do not require a nested container.
+    We can center our content horizontally with containers
+
+    Bootstrap comes with three different types (classes) of containers:
+
+    .container, which sets a max-width at each responsive breakpoint
+    .container-fluid, which is width: 100% at all breakpoints (Try this one also)
+    .container-{breakpoint}, which is width: 100% until the specified breakpoint
+
+    Link: https://getbootstrap.com/docs/5.1/layout/containers/
+    Link: https://getbootstrap.com/docs/5.1/layout/containers/#default-container
+-->
+    <div class="container">
+        <!-- 
+  Bootstrap’s grid system uses a series of containers, 
+  rows, and columns to layout and align content. 
+  It’s built with flexbox and is fully responsive. 
+  Below is an example and an in-depth look at how the grid comes together.
+
+  We can think about .row as table row (tr)
+  We can think about .col as table column/data (td)
+  <tr> => div class="row"
+        <td></td> => div class="col"
+ </tr>
+
+  Rows are wrappers for columns as we have <tr> wrapping the <td>
+  Each column has horizontal padding (called a gutter) for controlling the space between them. 
+  This padding is then counteracted on the rows with negative margins. 
+  This way, all the content in your columns is visually aligned down the left side. 
+
+  *************************************************************************************
+ 
+  We can have maximum of 12 columns (col) in each row, 
+  so for example to have two equal size div elements besides each other we can give each one 6-column width,
+  or if you want 3 columns you can give each div 4-column width and so on...
+-->
+
+
+        <!-- Starting with the very example -->
+        <div class="row">
+            <!-- 
+                Below we are forcing the BS to use 6 columns only for both div elements in any screen size 
+            -->
+            <div class="col-6">
+                First Div Element
+            </div>
+            <div class="col-6">
+                Second Div Element
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                First Div Element
+            </div>
+            <div class="col-4">
+                Second Div Element
+            </div>
+            <div class="col-4">
+                Third Div Element
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                First Div Element
+            </div>
+            <div class="col-4">
+                Second Div Element
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                My main page content
+            </div>
+            <div class="col-4">
+                My sidebar/navigation
+            </div>
+        </div>
+
+        <!-- Starting with setting breakpoints -->
+        <!-- 
+         Grid Classes
+        The Bootstrap 4 or 5 grid system has five classes:
+
+        .col- (extra small devices - screen width less than 576px) <= we used it above :-)
+        .col-sm- (small devices - screen width equal to or greater than 576px)
+        .col-md- (medium devices - screen width equal to or greater than 768px)
+        .col-lg- (large devices - screen width equal to or greater than 992px)
+        .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+        The classes above can be combined to create more dynamic and flexible layouts.   
+
+        Tip: Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
+
+        We can add background classes provided by bootstrap to see it better in the browser:
+        https://getbootstrap.com/docs/4.5/utilities/colors/
+
+        Below we used col-md-4, 
+        based on breakpoints they will stack besides each other
+        if the browser window is greater than 768px 
+        if we reduced the browser width to less than 768px they will be stacked vertically
+        **********************************************************************************
+
+        For small screen devices, we can use col-sm
+        Example:
+        if we want content1 and content2 to be displayed in one line (horizontally)
+        and content3 to be displayed below them we can add the classes:
+        - col-sm-6 for the first and the second divs
+        - notice that we don't need to add col-sm-12 for the third div as it's the default
+        Notice that col-sm works with minimum 576px
+         -->
+
+        <hr>
+        <div class="row">
+            <!-- 
+                adding 3 div elements 
+            -->
+            <div class="col-sm-6 col-md-4">
+                Label 1
+            </div>
+            <div class="col-sm-6 col-md-4">
+                Label 2
+            </div>
+            <!-- 
+                We didn't specify the column numbers in small screens 
+                BS will give it 12 column (by default)
+                no need to add .col-sm-12
+            -->
+            <div class="col-md-4">
+                Label 3
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <!-- 
+                col-12 ??? <= since we haven't specify the screen size (s,md,lg,xl,xxl)
+                this div will take 12 columns from the small screen and beyond
+                we haven't col-sm-12 or col-md-12 or col-lg-12, etc...
+             -->
+            <div class="col-12">Content1</div>
+            <div class="col-12">Content2</div>
+            <div class="col-12">Content3</div>
+            <div class="col-12">Content4</div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-sm-4 col-md-2">The Course Navigation</div>
+            <div class="col-sm-8 col-md-8">The main articles</div>
+            <div class="col-sm-12 col-md-2">The advertisements</div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <!-- 
+                all columns classes are inside .row
+
+                In BS:
+                for extra small (X-Small) by default BS will make the div taking 12 columns
+                col-sm-(x) form 1 to 12 => for small screens => this will work on small screens
+                col-md-(x) form 1 to 12 => for medium
+                col-lg-(x)
+
+                NOTE: 
+                col-md-8 => will take 8 columns in medium screens and beyond (for large and x-large)
+
+                Below no need to type: col-md-8 col-lg-8 !!!
+
+             -->
+            <div class="col-sm-6 col-md-8 col-lg-8">Item1</div>
+            <div class="col-sm-6 col-md-4 col-lg-4">Item2</div>
+            <div class="col-sm-6 col-md-4 col-lg-4">Item3</div>
+            <div class="col-sm-6 col-md-8 col-lg-8">Item4</div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <!-- 
+                we can use (col-xxl) for big signs on TV or on streets
+                might not be suitable for laptop monitors 
+             -->
+            <div class="col-sm-6 col-md-8 col-lg-6 col-xl-4 col-xxl-3">Item1</div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3">Item2</div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-3">Item3</div>
+            <div class="col-sm-6 col-md-8 col-lg-12 col-xl-2 col-xxl-3">Item4</div>
+        </div>
+
+
+    </div> <!-- end div.container -->
+
+
+
+
+    <!-- All our HTML elements have to be placed before calling our scripts: -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
