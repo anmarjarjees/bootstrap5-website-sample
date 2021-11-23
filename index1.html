@@ -34,6 +34,8 @@
             background-color: wheat;
             border: 1px solid brown;
             text-align: center;
+            /* We can specify the height of these inner divs */
+            height: 100px;
         }
     </style>
 </head>
@@ -86,6 +88,7 @@
         <div class="row">
             <!-- 
                 Below we are forcing the BS to use 6 columns only for both div elements in any screen size 
+                Each div will take 6 columns in ANY screen size (x-small, small, large, x-large, xx-large )
             -->
             <div class="col-6">
                 First Div Element
@@ -127,20 +130,20 @@
 
         <!-- Starting with setting breakpoints -->
         <!-- 
-         Grid Classes
+        Grid Classes
         The Bootstrap 4 or 5 grid system has five classes:
-
         .col- (extra small devices - screen width less than 576px) <= we used it above :-)
         .col-sm- (small devices - screen width equal to or greater than 576px)
         .col-md- (medium devices - screen width equal to or greater than 768px)
         .col-lg- (large devices - screen width equal to or greater than 992px)
-        .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+        .col-xl- (x-large devices - screen width equal to or greater than 1200px)
         The classes above can be combined to create more dynamic and flexible layouts.   
 
-        Tip: Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
+        
+        Tip: 
+        Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
 
-        We can add background classes provided by bootstrap to see it better in the browser:
-        https://getbootstrap.com/docs/4.5/utilities/colors/
+        Link: https://getbootstrap.com/docs/5.1/layout/breakpoints/#available-breakpoints
 
         Below we used col-md-4, 
         based on breakpoints they will stack besides each other
@@ -176,29 +179,29 @@
             <div class="col-md-4">
                 Label 3
             </div>
-        </div>
-
+        </div> <!-- end div.row -->
         <hr>
+
         <div class="row">
             <!-- 
                 col-12 ??? <= since we haven't specify the screen size (s,md,lg,xl,xxl)
                 this div will take 12 columns from the small screen and beyond
-                we haven't col-sm-12 or col-md-12 or col-lg-12, etc...
+                we haven't used col-sm-12 or col-md-12 or col-lg-12, etc...
              -->
-            <div class="col-12">Content1</div>
-            <div class="col-12">Content2</div>
-            <div class="col-12">Content3</div>
-            <div class="col-12">Content4</div>
-        </div>
+            <div class="col-12">Full 12-cols Content1</div>
+            <div class="col-12">Full 12-cols Content2</div>
+            <div class="col-12">Full 12-cols Content3</div>
+            <div class="col-12">Full 12-cols Content4</div>
+        </div> <!-- end div.row -->
 
         <hr>
         <div class="row">
             <div class="col-sm-4 col-md-2">The Course Navigation</div>
             <div class="col-sm-8 col-md-8">The main articles</div>
             <div class="col-sm-12 col-md-2">The advertisements</div>
-        </div>
-
+        </div> <!-- end div.row -->
         <hr>
+
         <div class="row">
             <!-- 
                 all columns classes are inside .row
@@ -219,9 +222,9 @@
             <div class="col-sm-6 col-md-4 col-lg-4">Item2</div>
             <div class="col-sm-6 col-md-4 col-lg-4">Item3</div>
             <div class="col-sm-6 col-md-8 col-lg-8">Item4</div>
-        </div>
-
+        </div> <!-- end div.row -->
         <hr>
+
         <div class="row">
             <!-- 
                 we can use (col-xxl) for big signs on TV or on streets
@@ -231,12 +234,81 @@
             <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3">Item2</div>
             <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-3">Item3</div>
             <div class="col-sm-6 col-md-8 col-lg-12 col-xl-2 col-xxl-3">Item4</div>
-        </div>
+        </div> <!-- end div.row -->
+        <hr>
 
+        <!-- 
+            Creating another div.row and applying for more practising 
+        -->
+        <div class="row">
+            <div class="col-sm-4">Materials#1</div>
+            <div class="col-sm-4">Materials#2</div>
+            <div class="col-sm-4">Materials#3</div>
+        </div> <!-- end div.row -->
+        <hr>
 
+        <div class="row">
+            <!-- 
+        What happens if the total of the columns is less/more than 12?
+
+        If more than 12 columns are placed within a single row, 
+        each group of extra columns will, as one unit, wrap onto a new line.
+
+        If less than 12 there will have an empty column or a space at the end of the row.
+        
+        In such case we can move the content (columns) to the right, or center them
+        by using offset class.
+
+        Offset classes:
+        Move columns to the right using .offset-md-* classes. These classes increase the left margin of a column by * columns. 
+        For example, .offset-md-4 moves .col-md-4 over four columns.
+
+        below we are adding "offset-sm-2" to look centre
+
+        NOTE: 
+        Don't forget that offset-sm-1 class will be applied on:
+        small screen devices and larger/above, 
+        so we need to disable (reset) the offset to 0 for medium screen devices and higher/above by adding "offset-sm-0"
+       -->
+            <div class="offset-sm-1 col-sm-5">More Materials#1</div>
+            <div class="col-sm-5">More Materials#2</div>
+            <!-- <div class="col-sm-3">More Materials#3</div> -->
+            <!-- <div class="col-sm-3">More Materials#4</div> -->
+        </div> <!-- end div.row -->
+        <hr>
+
+        <!-- another example about using offset -->
+        <div class="row">
+            <div class="col-sm-5">More Final Materials#1</div>
+            <!-- adding empty columns in between -->
+            <div class="offset-sm-2 col-sm-5">More Final Materials#2</div>
+        </div> <!-- end div.row -->
+        <hr>
+
+        <!-- Creating another div.row for more practising -->
+        <div class="row">
+            <!-- 
+            to create "Three Equal Columns" for any screen size!
+            we can do it by using the class .col
+            The following example shows how to create three equal-width columns, 
+            on ALL devices and screen widths: 
+            -->
+            <div class="col">Left Content1</div>
+            <div class="col">Middle Content2</div>
+            <div class="col">Right Content3</div>
+        </div> <!-- end div.row -->
+        <hr>
+
+        <!-- Creating another div.row for more practising -->
+        <div class="row">
+            <div class="main-content col-md-8">
+                <p>The main content of the page</p>
+            </div>
+            <div class="sidebar col-md-4">
+                <p>The content of the sidebar</p>
+            </div>
+        </div> <!-- end div.row -->
     </div> <!-- end div.container -->
-
-
 
 
     <!-- All our HTML elements have to be placed before calling our scripts: -->
