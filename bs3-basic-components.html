@@ -1,0 +1,570 @@
+<!-- Copy the starter template then modify it -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--
+        For using BS Icons:
+        How to use Bootstrap icons?
+        Step 1: Include the following Bootstrap CDN link in the <head> section of you HTML document.
+        bootstrap-icons => Official open source SVG icon library for Bootstrap
+        link: https://cdnjs.com/libraries/bootstrap-icons
+
+        NOTE: Copy the link for the CSS minified file
+     -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.1/font/bootstrap-icons.min.css"
+        integrity="sha512-WYaDo1TDjuW+MPatvDarHSfuhFAflHxD87U9RoB4/CSFh24/jzUHfirvuvwGmJq0U7S9ohBXy4Tfmk2UKkp2gA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>The basic content</title>
+</head>
+
+<body>
+    <!-- 
+        To check the exact pixels for BS breakpoints:
+        link: https://getbootstrap.com/docs/5.1/layout/breakpoints/
+        Breakpoint	        Class infix	    Dimensions
+        X-Small	            None	        <576px
+        Small	            sm	            ≥576px
+        Medium	            md	            ≥768px
+        Large	            lg	            ≥992px
+        Extra large	        xl	            ≥1200px
+        Extra extra large	xxl	            ≥1400px
+
+        Background Color:
+        using bg-light
+        Background Color link: https://getbootstrap.com/docs/5.1/utilities/background/
+        Text Color link: https://getbootstrap.com/docs/5.1/utilities/colors/
+     -->
+
+    <header>
+        <!-- empty for now -->
+    </header>
+    <!-- Adding the components -->
+
+    <!--
+        Adding first section For Home
+        NOTE:
+        For this section, we didn't add any class of container
+        To make the section background running from left to right
+        Giving us the feeling of filling the entire row
+
+        However the content inside need to be contained with a container
+
+        >> background color: bg-secondary
+        link: https://getbootstrap.com/docs/5.1/utilities/colors/
+        >> font/text color: text-white
+        link: https://getbootstrap.com/docs/5.1/utilities/background/
+    -->
+
+    <!-- Home Section -->
+    <section id="home" class="bg-secondary text-white">
+        <!--
+                Using flex to have two items in one row beside each other
+                ITEM1 ITEM2
+
+                Item1 => the div that contains the text
+                Item2 => the div that contains the image
+
+                Using .d-flex for the main div
+                .d-flex will be applied to all screen sizes
+                which means align the children elements side by side
+
+                So it's better to apply the flex box only with medium screens and above
+                using .d-md-flex
+
+                link: https://getbootstrap.com/docs/5.1/utilities/flex/
+
+                text-center: to center all the contents texts and images
+
+                Using BS spacing classes:
+                Adding BS margins between the icons (on the left/right sides) => using x-axis => mx-2 (.5rem)
+                the same idea for padding (px-2)
+                2 is just a BS varaible to set the value to .5rem as shown below
+
+                Where size is one of:
+
+                0 - sets margin or padding to 0
+                1 - sets margin or padding to .25rem (4px if font-size is 16px)
+                2 - sets margin or padding to .5rem (8px if font-size is 16px)
+                3 - sets margin or padding to 1rem (16px if font-size is 16px)
+                4 - sets margin or padding to 1.5rem (24px if font-size is 16px)
+                5 - sets margin or padding to 3rem (48px if font-size is 16px)
+                auto - sets margin to auto
+
+                W3Schools: https://www.w3schools.com/bootstrap5/bootstrap_utilities.php
+
+                py-3: Adding 3 margins from top and bottom (Y-axis)
+                px-3: Adding 3 margins from left and right (X-axis)
+
+            With Flex, we can also use align and Justify:
+
+            Align Items:
+            .align-items-center => align the element vertically
+
+            link: https://getbootstrap.com/docs/5.1/utilities/flex/#align-items
+
+            Justify Contents: => adding/removing spaces between/after/before the contents
+            .justify-content-between
+            .justify-content-between
+            and more...
+            link: https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content
+        -->
+        <div class="container d-md-flex py-3 align-items-center">
+            <!--
+                    .text-center => Center aligned text on all viewport sizes
+                    .text-md-start => Start aligned text on viewports sized MD (medium) or wider.
+                    link: https://getbootstrap.com/docs/5.1/utilities/text/#text-alignment
+            -->
+            <article class="text-center text-md-start">
+                <h1>Web Developer</h1>
+                <!--
+                        Lead:
+                        Make a paragraph stand out by adding .lead
+                        link: https://getbootstrap.com/docs/5.1/content/typography/#lead
+                    -->
+                <p class="lead">The Web Development 8-month program provides you with the necessary skills and
+                    training to enter
+                    and
+                    succeed in the website development. The program will help you to develop a full functional
+                    website by
+                    teaching you the required skills for the front-end and back-end development.
+                </p>
+                <p class="lead">
+                    After finishing this program you will be equipped with many skills to choose your career to work
+                    as Front-End Developer, Back-End Developer, or Full-Stack Developer
+                </p>
+                <button type="button" class="btn btn-dark btn-lg my-2">Sign up now!</button>
+            </article> <!-- end article for text -->
+            <!--
+                Notice that the image will be fully expanded
+
+                Responsive images:
+                Images in Bootstrap are made responsive with .img-fluid.
+                This applies max-width: 100%; and height: auto; to the image
+
+                so that it scales with the parent element
+                BS: https://getbootstrap.com/docs/5.1/content/images/#responsive-images
+
+                Sizing
+                Easily make an element as wide or as tall with our width and height utilities
+                using: w-50 and w-100
+                BS: https://getbootstrap.com/docs/5.1/utilities/sizing/#relative-to-the-parent
+
+                using
+                .rounded-circle
+                .rounded
+                .rounded-pill
+                to add rounded corners:
+                link: https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius
+            -->
+            <img src="images/programmer.jpg" alt="Female Programmer"
+                class="w-50 img-fluid rounded d-none d-sm-block mx-3">
+        </div> <!-- end div for flex -->
+    </section> <!-- end section#home -->
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="container py-3">
+        <!--
+                For working with columns, we need the main div with class "row"
+
+                Gap:
+                When using display: grid, you can make use of gap utilities 
+                on the parent grid container. 
+
+                Adding gap when the three elements stack over each other:
+                gap-0 => no gaps
+                There is no .gap-auto utility class 
+                as it’s effectively the same as .gap-0.
+                ......
+                gap-5 => 5 points gap
+                https://getbootstrap.com/docs/5.1/utilities/spacing/#gap
+            -->
+        <div class="row text-center gap-2">
+            <!--
+                    We need to layout/distribute the column evenly:
+                    using .col => layout the column horizontally in all screens
+                    using .col-md => layout the column horizontally only on medium screens and above
+
+                    Adding 3 even columns
+                 -->
+            <div class="col-md">
+                <!-- One of three columns -->
+                <!--
+                        Inside each column, we can add BS component "Card" to make it looks nice!
+                        link: https://getbootstrap.com/docs/5.1/components/card/
+                -->
+                <div class="card bg-light bg-gradient">
+                    <!--
+                            Instead of adding images, we will add icons.
+                            We can use Font Awesome (refer to my code examples)
+                            OR using the BS5 new set of icons:
+                            link: https://getbootstrap.com/docs/5.0/extend/icons/
+
+                            Or Check this link from Tutorial Republic:
+                            - link: https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php
+
+                        Using BS icons instead of the initial img code
+                        <img src="..." class="card-img-top" alt="...">
+
+                        searching for icons:
+                        link: https://www.tutorialrepublic.com/bootstrap-icons-classes.php
+
+
+                        Changing the icon size as changing the text/font size:
+                        fs-1 => font size 1 (large as heading 1)
+                        .....
+                        fs-6 => font size 6 (small as heading 6)
+                        link: https://getbootstrap.com/docs/5.1/utilities/text/#font-size
+
+                        So you can use font-size and color to change the icon appearance.
+                        Example:
+                        <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
+                        -->
+                    <div class="bg-info">
+                        <i class="bi bi-alarm fs-1"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Flexible Times</h5>
+                        <p class="card-text">
+                            Two-shift courses; morning and evening plus the weekend.
+                            You can choose your favourite time!
+                        </p>
+                        <!-- formatting the a link a button -->
+                        <a href="#" class="btn btn-info">Check Dates and Times</a>
+                    </div>
+                </div> <!-- end BS div.card-->
+            </div> <!-- end div.col-md -->
+
+            <div class="col-md">
+                <div class="card bg-light bg-gradient">
+                    <div class="bg-info">
+                        <i class="bi bi-pc-display-horizontal fs-1"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Latests Technologies</h5>
+                        <p class="card-text">
+                            Our course are frequently updated to reflect the recent and the most demanding tools.
+                        </p>
+                        <a href="#" class="btn  btn-info">Go somewhere</a>
+                    </div>
+                </div> <!-- end BS div.card-->
+            </div> <!-- end div.col-md -->
+
+            <div class="col-md">
+                <div class="bg-info">
+                    <i class="bi bi-trophy-fill fs-1"></i>
+                </div>
+                <div class="card bg-light bg-gradient">
+                    <div class="card-body">
+                        <h5 class="card-title">Goal Achievement</h5>
+                        <p class="card-text">
+                            You will be equipped with Web and Job development skills for achieving your goals and
+                            dreams.
+                        </p>
+                        <a href="#" class="btn btn-info">Go somewhere</a>
+                    </div>
+                </div> <!-- end BS div.card-->
+            </div> <!-- end div.col-md -->
+        </div> <!-- end div.row -->
+    </section> <!-- end section#highlights -->
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="container">
+        <!--  align-items-center => align the items vertically -->
+        <div class="row align-items-center">
+            <!-- 
+                We need to layout/distribute the column evenly:
+                Also applying row and its column (BS Grid System)
+                Remember that:
+                - using .col => layout the columns horizontally in all screens
+                - using .col-md => layout the column horizontally only on medium screens and above
+                - using .col-lg => layout the column horizontally only on large screens and above
+                
+                Background gradient
+                link: https://getbootstrap.com/docs/5.1/utilities/background/#background-gradient
+            -->
+            <div class="col-md border border-secondary rounded-3 bg-light p-2">
+                <h3>Front-End Development</h3>
+                <p>Learning the essential tools for Front-end development which include:
+                </p>
+                <ul>
+                    <li>HTML and CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>ReactJS</li>
+                </ul>
+                <!--
+                    Styling the a element to look like a button:
+                    - btn btn-primary
+                    Also make center it horizontally:
+                    - make it block in any screen size => d-block
+                    - change it's width so it will not take the entire row as block element => w-75
+                    - applying margin auto => m-auto
+                -->
+                <a class="btn btn-primary w-75 d-block m-auto" href="#" role="button">
+                    Front-end development details
+                    <i class="bi-caret-right-fill"></i>
+                </a>
+            </div>
+
+            <div class="col-md">
+                <img src="images/front-end.jpg" class="w-100" alt="Front-End Image">
+            </div>
+        </div>
+        <hr>
+        <div class="row align-items-center">
+            <div class="col-md">
+                <img src="images/back-end.jpg" class="w-100" alt="Back-End Image">
+            </div>
+            <div class="col-md border border-secondary rounded-3 bg-light p-2">
+                <h3>Back-End Development</h3>
+                <p>Learning the essential tools for back-end development which include:
+                </p>
+                <ul>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ul>
+                <a class="btn btn-primary w-75 d-block m-auto" href="#" role="button">
+                    Back-end development details
+                    <i class="bi-caret-right-fill"></i>
+                </a>
+            </div>
+        </div> <!-- end div.row -->
+    </section> <!-- end section#curriculum -->
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="container text-center">
+        <h2>Our Instructors</h2>
+        <p class="lead text-center">Learn more about our instructors</p>
+        <div class="row">
+            <!-- 
+                Adding div elements for 4 instructors as an example
+                Remember the 12 columns as total for BS
+                Dividing them by:
+                - 1 instructor per row in extra small (by default)
+                - 2 instructors per row on medium screens, so 6 columns for each div
+                - 4 instructors per row on large screens, so 3 columns for each div               
+             -->
+            <div class="col-md-6 col-lg-3">
+                <!--
+                    Inside each column, 
+                    we will also add BS component "Card" as we did before
+                    link: https://getbootstrap.com/docs/5.1/components/card/
+
+                    The initial template
+                    link: https://getbootstrap.com/docs/5.1/components/card/#images
+
+                    I removed the initial inline style => style="width: 18rem;"
+                    from div.card
+                -->
+                <div class="card">
+                    <!-- 
+                        Adding extra BS classes to the image
+
+                        Make the images look like circles by adding rounded corners:
+                        The .rounded-circle class shapes the image to a circle:
+                        .rounded-circle => Adding rounded border for the image
+                        link: https://www.w3schools.com/bootstrap5/bootstrap_images.php
+
+                        link: https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius
+
+                        * .w-75 is a bootstrap utility class to set the image to be 75% of its container (the parent element)
+                        link: https://getbootstrap.com/docs/5.1/utilities/sizing/
+
+                        .card-img-top places an image to the top of the card
+                        link: https://getbootstrap.com/docs/5.1/components/card/#images
+
+                        .m-auto => set margin for all side to auto to center the image
+                        for all screens
+                    -->
+                    <img src="images/instructor1.jpg" class="card-img-top rounded-circle w-50 m-auto m-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Martin Smith</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <!-- 
+                            Adding the social media icons 
+                            as the content for the anchor elements
+
+                            Using BS Icons
+                            searching for BS icons
+                            https://www.tutorialrepublic.com/bootstrap-icons-classes.php
+                        -->
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-github"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="images/instructor3.jpg" class="card-img-top rounded-circle w-50 m-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kate Wilson</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-github"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="images/instructor2.jpg" class="card-img-top rounded-circle w-50 m-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sam Simpsons</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-github"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="images/instructor4.jpg" class="card-img-top rounded-circle w-50 m-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Alexa Chow</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-github"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="bi-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End div.row -->
+    </section> <!-- end section#instructors -->
+
+    <!-- Subscribe Section -->
+    <!-- Adding padding for 4px from all the sides -->
+    <section id="subscribe" class="bg-info text-light p-4 text-center">
+        <div class="container">
+            <!-- No need for Row and Columns classes here -->
+            <h3>
+                Subscribe to our monthly newsletter to receive the updated news and events.
+            </h3>
+            <div class="input-group mb-3 rounded w-75 m-auto">
+                <!--
+                You can use the Flex (if needed):
+                The content of this container div are two:
+                - Left Side: The input box for email
+                - Right Side: The Submit button
+                
+                We can align these two items horizontally 
+                on medium, large, etc... screens
+
+                In small screen and less, we want to display them vertically
+
+                But we designed the input group based on these General rules:
+                link: https://getbootstrap.com/docs/5.1/forms/input-group/
+
+                For this specific sample:
+                link: https://getbootstrap.com/docs/5.1/forms/input-group/#button-addons
+            -->
+                <input type="text" class="form-control" placeholder="Your Email" aria-label="Recipient's username"
+                    aria-describedby="Recipient's username">
+                <button class="btn btn-dark bg-gradient" type="button" id="btn-subscribe">
+                    Subscribe
+                </button>
+            </div>
+        </div> <!-- end div.container -->
+    </section> <!-- end section#subscribe -->
+
+    <!-- 
+    Adding footer:
+    For Bootstrap version 4 and before only:
+    Jumbotron indicates a big grey box for calling extra attention to some special content or information.
+
+    Tip: Inside a jumbotron you can put nearly any valid HTML, 
+    including other Bootstrap elements/classes.
+
+    We can use div as usual instead of footer, 
+    but nice to use HTML5 semantic element :-)
+
+    <footer class="jumbotron"> => for BS4
+    Notice that class="jumbotron is not avaialable for BS5"
+    but we can imitate its behaviour and style
+
+    .text-center: Center aligned text on all viewport sizes
+    The link: https://getbootstrap.com/docs/4.5/utilities/text/#text-alignment
+    -->
+    <footer class="bg-light p-5 text-center">
+        <!-- 
+            Display Headings:
+            Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight), 
+            and there are four classes to choose from: .display-1, .display-2, .display-3, .display-4
+            The link: https://www.w3schools.com/bootstrap5/bootstrap_typography.php
+         -->
+        <h1 class="display-4">Web Development Bootcamp</h1>
+        <!--
+            .lead: Make a paragraph stand out
+         -->
+        <p class="lead font-italic font-weight-bold">
+            The gate that will take you into the Web Development horizon!
+        </p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
