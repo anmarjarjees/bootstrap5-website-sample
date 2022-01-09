@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    <!-- Starting with the HTML5 header element to include the entire BS navbar code -->
     <header>
 
         <!--
@@ -65,7 +66,7 @@
         (.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light)
 
         ==========================================================
-        One Final Extra Addon is give a navbar a fix positioning:
+        One Final Extra Addon is giving a navbar a fix positioning:
         Use BS position utilities to place navbars in non-static positions.
         Choose from fixed to the top, fixed to the bottom, or stickied to the top (scrolls with the page until it reaches the top, then stays there).
 
@@ -77,7 +78,7 @@
         Using position property will affect the normal flow of any block-level element
         so the elements beneath it will jump above.
         As this what happens when using BS position of fixed with nav
-        To fix it, we will add our custom CSS (Check the code)
+        To fix it, we can add our custom CSS (Check the code)
 
         Part#1: main container <nav> element
     -->
@@ -237,19 +238,19 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Students Testimonial</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Our Instructors</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonial">Students Testimonial</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
                     </ul>
                 </div> <!-- end div.collapse -->

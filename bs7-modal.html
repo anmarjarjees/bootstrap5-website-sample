@@ -1,0 +1,151 @@
+<!-- Copy the starter template then modify it -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--
+        For using BS Icons:
+        How to use Bootstrap icons?
+        Step 1: Include the following Bootstrap CDN link in the <head> section of you HTML document.
+        bootstrap-icons => Official open source SVG icon library for Bootstrap
+        link: https://cdnjs.com/libraries/bootstrap-icons
+
+        NOTE: Copy the link for the CSS minified file
+     -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.1/font/bootstrap-icons.min.css"
+        integrity="sha512-WYaDo1TDjuW+MPatvDarHSfuhFAflHxD87U9RoB4/CSFh24/jzUHfirvuvwGmJq0U7S9ohBXy4Tfmk2UKkp2gA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>BS Carousel and Grid System</title>
+</head>
+
+
+<body>
+    <!-- 
+        BS Modal:
+        Using Bootstrap's JavaScript modal plugin 
+        to add dialogs to your site for:
+        - lightboxes
+        - user notifications
+        - or completely custom content
+
+        link: https://getbootstrap.com/docs/5.1/components/modal/
+
+        For This demonstration, we will use "Static backdrop"
+        When backdrop is set to static, 
+        the modal will not close when clicking outside it. 
+        link: https://getbootstrap.com/docs/5.1/components/modal/#static-backdrop        
+    -->
+
+    <!-- Button trigger modal -->
+    <!-- 
+        Button trigger modal 
+        
+        Adding Bootstrap button:
+        https://getbootstrap.com/docs/5.1/components/buttons/
+
+        - We need to connect this button with our modal,
+        so it will activate/launch our model window (div) when this button is clicked
+
+        - We can do it by using: 
+        * data-bs-toggle="modal" 
+          Before BS version 5 => data-toggle="modal" 
+        
+        * data-bs-target="#staticBackdrop" 
+          Before BS version 5 => data-target="#staticBackdrop"
+          NOTE: This value has to match the value of its modal div id
+    -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <!-- 
+        Modal Options:
+        Options can be passed via data attributes or JavaScript. 
+        For data attributes, append the option name to data-, 
+        as in data-backdrop="" the previous (older) versions of BS
+        or data-bs-backdrop="" in the current (newer) versions of BS.
+        
+        Backdrop:
+        Scrolling the <body> element is disabled 
+        when an offcanvas and its backdrop are visible. 
+        Use the data-bs-scroll attribute to toggle <body> scrolling 
+        and data-bs-backdrop to toggle the backdrop.
+
+        link: https://getbootstrap.com/docs/5.1/components/offcanvas/#backdrop
+
+        [data-bs-backdrop] attribute can have one of these values:
+        - boolean value:
+        -- true: dark overlay
+        -- false: no overlay (transparent)
+        - or the string "static": If you specify the value "static",
+        it is not possible to close the modal when clicking outside of it
+
+        Use the .fade class to add a fading effect when opening and closing the modal
+
+        [data-bs-keyboard] attribute can have  one of these values:
+        - true: true - the modal can be closed with Esc Key
+        - false: false - the modal cannot be closed with Esc Key
+     -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- 
+        .modal-dialog: makes the modal narrower than the full width of the page
+        -->
+        <div class="modal-dialog">
+            <!-- 
+            .modal-content: the content inside our modal
+            Styles the modal properly with border, background-color, etc.
+            -->
+            <div class="modal-content">
+                <!-- 
+                .modal-header: Defines the style for the header of the modal
+                -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- 
+                .modal-body: Defines the style for the body of the modal
+                -->
+                <div class="modal-body">
+                    <!-- Adding our form inside the modal body: -->
+
+                </div>
+
+                <!-- 
+                .modal-footer: Defines the style for the footer in the modal. 
+                Note: This area is right-aligned by default.
+                -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div> <!-- end div.modal-content -->
+        </div> <!-- end div.modal-dialog -->
+    </div> <!-- end div.modal -->
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

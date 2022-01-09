@@ -187,7 +187,7 @@
                 There is no .gap-auto utility class 
                 as it’s effectively the same as .gap-0.
                 ......
-                gap-5 => 5 points gap
+                gap-2 => 2 points gap
                 https://getbootstrap.com/docs/5.1/utilities/spacing/#gap
             -->
         <div class="row text-center gap-2">
@@ -542,8 +542,13 @@
 
     .text-center: Center aligned text on all viewport sizes
     The link: https://getbootstrap.com/docs/4.5/utilities/text/#text-alignment
+
+    p-5 => padding of 5 points for all sides
+    pb-0 => To remove the padding from the bottom only by setting it to 0
+    Notice shuffle the class attribute values will not change the result/styles
+    .mt-3 => margin of 3 points from the top
     -->
-    <footer class="bg-light p-5 text-center">
+    <footer class="bg-light mt-3 p-5 pb-0 text-center">
         <!-- 
             Display Headings:
             Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight), 
@@ -553,9 +558,14 @@
         <h1 class="display-4">Web Development Bootcamp</h1>
         <!--
             .lead: Make a paragraph stand out
+            .fs-3: Change the font-size of text to 3 points
          -->
-        <p class="lead font-italic font-weight-bold">
+        <p class="lead font-italic font-weight-bold fs-3">
             The gate that will take you into the Web Development horizon!
+        </p>
+
+        <p class="mt-3 border-top">
+            Copyright &copy; 2022 ABC Advanced Academy - Web Development Bootcamp
         </p>
     </footer>
 
