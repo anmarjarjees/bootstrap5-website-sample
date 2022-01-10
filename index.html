@@ -290,7 +290,7 @@
         we need to add this BS class also:
         - .d-md-block => for the medium size and beyond will be display: block
      -->
-        <section id="features" class="mt-3 container d-none d-md-block">
+        <section id="features" class="d-none d-md-block">
             <!-- 
         Carousel:
         A slideshow component for cycling through elements—images or slides of text—like a carousel.
@@ -582,9 +582,10 @@
                     data-bs-target="#staticBackdrop">
                     Sign up now!
                 </button>
+            </article> <!-- end article for text -->
 
-                <!-- Modal -->
-                <!-- 
+            <!-- Modal -->
+            <!-- 
         Modal Options:
         Options can be passed via data attributes or JavaScript. 
         For data attributes, append the option name to data-, 
@@ -613,22 +614,32 @@
         - false: false - the modal cannot be closed with Esc Key
      -->
 
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <!-- 
+            <div class="modal fade text-black" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <!-- 
     .modal-dialog: makes the modal narrower than the full width of the page
     -->
-                    <div class="modal-dialog">
-                        <!-- 
+                <div class="modal-dialog">
+                    <!-- 
         .modal-content: the content inside our modal
         Styles the modal properly with border, background-color, etc.
         -->
-                        <div class="modal-content">
+                    <div class="modal-content">
+                        <!-- Adding our form inside the modal content: -->
+                        <!-- 
+                                BS Forms:
+                                link: https://getbootstrap.com/docs/5.1/forms/overview/
+
+                                Using the basic/essential template and modify it:
+                                -->
+                        <form>
                             <!-- 
             .modal-header: Defines the style for the header of the modal
             -->
                             <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <h5 class="modal-title" id="staticBackdropLabel">
+                                    Apply to the Web Development Bootcamp
+                                </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -637,22 +648,19 @@
             .modal-body: Defines the style for the body of the modal
             -->
                             <div class="modal-body">
-                                <!-- Adding our form inside the modal body: -->
                                 <!-- 
-                                BS Forms:
-                                link: https://getbootstrap.com/docs/5.1/forms/overview/
-
-                                Using the basic/essential template and modify it:
-                                -->
-                                <form>
-                                    <!-- 
                                         Adding this div for full name 
                                         .mb-3 => adding margin of 3 points from the bottom only
                                     -->
-                                    <div class="mb-3">
-                                        <!-- using the value of "fullName" => for and id attributes -->
-                                        <label for="fullName" class="form-label">Full Name</label>
-                                        <!-- 
+                                <div class="mb-3">
+                                    <!-- 
+                                            using the value of "firstName":
+                                            - for and id attributes 
+                                        -->
+                                    <label for="firstName" class="form-label">
+                                        First Name
+                                    </label>
+                                    <!-- 
                                         aria-describedby attribute: 
                                         ==========================
                                         Associating form text with form controls
@@ -686,31 +694,82 @@
                 
                                         link: https://getbootstrap.com/docs/5.1/forms/validation/#supported-elements
                                         -->
-                                        <input type="text" class="form-control" id="fullName"
-                                            aria-describedby="fullNameHelp">
-                                        <!-- 
+                                    <input type="text" class="form-control" id="firstName"
+                                        aria-describedby="firstNameHelp">
+                                    <!-- 
                                         Form text below inputs can be styled with .form-text. 
                                         If a block-level element will be used, 
                                         a top margin is added for easy spacing from the inputs above.
                                         -->
-                                        <div id="fullNameHelp" class="form-text">
-                                            Write your full name to be used when we contact you.
-                                        </div>
+                                    <div id="firstName" class="form-text">
+                                        Your full name.
                                     </div>
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone
-                                            else.</div>
+                                <div class="mb-3">
+                                    <label for="lastName" class="form-label">
+                                        Last Name
+                                    </label>
+                                    <input type="text" class="form-control" id="lastName"
+                                        aria-describedby="lastNameHelp">
+                                    <div id="lastName" class="form-text">
+                                        Your full name.
                                     </div>
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="messageTextarea" class="form-label">
-                                            Your Message
-                                        </label>
-                                        <!-- 
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">
+                                        We'll never share your email with anyone
+                                        else.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="inputAddress1">Address 1</label>
+                                    <input type="text" class="form-control" id="inputAddress1"
+                                        placeholder="1234 Main St">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="inputAddress2">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2"
+                                        placeholder="Apartment, studio, or floor">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="provinceSelect">Province</label>
+                                    <select id="provinceSelect" class="form-select" aria-label="Default select example">
+                                        <option selected>Select your province</option>
+                                        <option value="AB">Alberta</option>
+                                        <option value="BC">British Columbia</option>
+                                        <option value="MB">Manitoba</option>
+                                        <option value="NB">New Brunswick</option>
+                                        <option value="NL">Newfoundland and Labrador</option>
+                                        <option value="NS">Nova Scotia</option>
+                                        <option value="ON">Ontario</option>
+                                        <option value="PE">Prince Edward Island</option>
+                                        <option value="QC">Quebec</option>
+                                        <option value="SK">Saskatchewan</option>
+                                        <option value="NT">Northwest Territories</option>
+                                        <option value="NU">Nunavut</option>
+                                        <option value="YT">Yukon</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="commentsTextarea" class="form-label">
+                                        Comments
+                                    </label>
+                                    <!-- 
                                             Accessibility:
                                             ==============
                                             .aria-label:
@@ -720,15 +779,9 @@
                 
                                             link: https://getbootstrap.com/docs/5.1/forms/overview/#accessibility
                                          -->
-                                        <textarea class="form-control" aria-label="Your Message" id="messageTextarea">
+                                    <textarea class="form-control" aria-label="Your Message" id="commentsTextarea">
                                         </textarea>
-                                    </div>
-
-
-                                    <button type="submit" class="btn btn-primary">
-                                        Submit
-                                    </button>
-                                </form>
+                                </div>
                             </div>
 
                             <!-- 
@@ -736,14 +789,21 @@
             Note: This area is right-aligned by default.
             -->
                             <div class="modal-footer">
+                                <!-- Adding the button for the form submission -->
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                                <!-- BS default button for closing the modal -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <!-- no need for this button -->
                                 <!-- <button type="button" class="btn btn-primary">Understood</button> -->
                             </div>
-                        </div> <!-- end div.modal-content -->
-                    </div> <!-- end div.modal-dialog -->
-                </div> <!-- end div.modal -->
-            </article> <!-- end article for text -->
+
+
+                        </form>
+                    </div> <!-- end div.modal-content -->
+                </div> <!-- end div.modal-dialog -->
+            </div> <!-- end div.modal -->
             <!--
                 Notice that the image will be fully expanded
 

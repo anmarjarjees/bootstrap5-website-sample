@@ -25,7 +25,7 @@ Throughout this project, I will add a few "index.html" files to explain and add 
 *****************************************************************
 - index.html => The final page (very few comments)
 
-The ["website live"] (https://anmarjarjees.github.io/bootstrap5-website-sample/)
+Check ["The live website"](https://anmarjarjees.github.io/bootstrap5-website-sample/)
 
 The Main Resources:
 * Bootstrap:
