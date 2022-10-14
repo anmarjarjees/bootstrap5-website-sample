@@ -24,11 +24,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <title>Bootstrap The Basic and Grid</title>
     <style>
+        table {
+            border: 3px solid blue;
+            margin: 10px auto;
+        }
+
+        table td {
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        div.container {
+            background-color: lightyellow;
+        }
+
         /* Using our custom CSS not BS */
         div.row div {
             background-color: wheat;
@@ -41,6 +55,37 @@
 </head>
 
 <body>
+
+    <table>
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+            <td>col3</td>
+        </tr>
+        <tr>
+            <td>col1</td>
+            <td>col2</td>
+            <td>col3</td>
+        </tr>
+    </table>
+
+
+    <!-- col in general => will be distributed evenly -->
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+
     <!-- 
     Containers are the most basic layout element in Bootstrap 
     and are required when using BS default grid system. 
@@ -55,33 +100,33 @@
     .container-fluid, which is width: 100% at all breakpoints (Try this one also)
     .container-{breakpoint}, which is width: 100% until the specified breakpoint
 
-    Link: https://getbootstrap.com/docs/5.1/layout/containers/
-    Link: https://getbootstrap.com/docs/5.1/layout/containers/#default-container
+    Link: https://getbootstrap.com/docs/5.2/layout/containers/
+    Link: https://getbootstrap.com/docs/5.2/layout/containers/#default-container
     -->
     <div class="container">
         <!-- 
-  Bootstrap’s grid system uses a series of containers, 
-  rows, and columns to layout and align content. 
-  It’s built with flexbox and is fully responsive. 
-  Below is an example and an in-depth look at how the grid comes together.
+            Bootstrap's grid system uses a series of containers, 
+            rows, and columns to layout and align content. 
+            It's built with flexbox and is fully responsive. 
+            Below is an example and an in-depth look at how the grid comes together.
 
-  We can think about .row as table row (tr)
-  We can think about .col as table column/data (td)
-  <tr> => div class="row"
-        <td></td> => div class="col"
- </tr>
+            We can think about .row as table row (tr)
+            We can think about .col as table column/data (td)
+            <tr> => div class="row"
+                    <td></td> => div class="col"
+            </tr>
 
-  Rows are wrappers for columns as we have <tr> wrapping the <td>
-  Each column has horizontal padding (called a gutter) for controlling the space between them. 
-  This padding is then counteracted on the rows with negative margins. 
-  This way, all the content in your columns is visually aligned down the left side. 
+            Rows are wrappers for columns as we have <tr> wrapping the <td>
+            Each column has horizontal padding (called a gutter) for controlling the space between them. 
+            This padding is then counteracted on the rows with negative margins. 
+            This way, all the content in your columns is visually aligned down the left side. 
 
-  *************************************************************************************
- 
-  We can have maximum of 12 columns (col) in each row, 
-  so for example to have two equal size div elements besides each other we can give each one 6-column width,
-  or if you want 3 columns you can give each div 4-column width and so on...
--->
+            *************************************************************************************
+            
+            We can have maximum of 12 columns (col) in each row, 
+            so for example to have two equal size div elements besides each other we can give each one 6-column width,
+            or if you want 3 columns you can give each div 4-column width and so on...
+        -->
         <!-- Starting with the very example -->
         <div class="row">
             <!-- 
@@ -141,7 +186,7 @@
         Tip: 
         Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
 
-        Link: https://getbootstrap.com/docs/5.1/layout/breakpoints/#available-breakpoints
+        Link: https://getbootstrap.com/docs/5.2/layout/breakpoints/#available-breakpoints
 
         Below we used col-md-4, 
         based on breakpoints they will stack besides each other
@@ -156,7 +201,7 @@
         - col-sm-6 for the first and the second divs
         - notice that we don't need to add col-sm-12 for the third div as it's the default
         Notice that col-sm works with minimum 576px
-         -->
+        -->
 
         <hr>
         <div class="row">

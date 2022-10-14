@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <!--
         For using BS Icons:
@@ -32,7 +32,7 @@
 <body>
     <!-- 
         To check the exact pixels for BS breakpoints:
-        link: https://getbootstrap.com/docs/5.1/layout/breakpoints/
+        link: https://getbootstrap.com/docs/5.2/layout/breakpoints/
         Breakpoint	        Class infix	    Dimensions
         X-Small	            None	        <576px
         Small	            sm	            ≥576px
@@ -43,8 +43,8 @@
 
         Background Color:
         using bg-light
-        Background Color link: https://getbootstrap.com/docs/5.1/utilities/background/
-        Text Color link: https://getbootstrap.com/docs/5.1/utilities/colors/
+        Background Color link: https://getbootstrap.com/docs/5.2/utilities/background/
+        Text Color link: https://getbootstrap.com/docs/5.2/utilities/colors/
      -->
 
     <header>
@@ -62,9 +62,9 @@
         However the content inside need to be contained with a container
 
         >> background color: bg-secondary
-        link: https://getbootstrap.com/docs/5.1/utilities/colors/
+        link: https://getbootstrap.com/docs/5.2/utilities/colors/
         >> font/text color: text-white
-        link: https://getbootstrap.com/docs/5.1/utilities/background/
+        link: https://getbootstrap.com/docs/5.2/utilities/background/
     -->
 
     <!-- Home Section -->
@@ -83,7 +83,7 @@
                 So it's better to apply the flex box only with medium screens and above
                 using .d-md-flex
 
-                link: https://getbootstrap.com/docs/5.1/utilities/flex/
+                link: https://getbootstrap.com/docs/5.2/utilities/flex/
 
                 text-center: to center all the contents texts and images
 
@@ -112,26 +112,26 @@
             Align Items:
             .align-items-center => align the element vertically
 
-            link: https://getbootstrap.com/docs/5.1/utilities/flex/#align-items
+            link: https://getbootstrap.com/docs/5.2/utilities/flex/#align-items
 
             Justify Contents: => adding/removing spaces between/after/before the contents
             .justify-content-between
             .justify-content-between
             and more...
-            link: https://getbootstrap.com/docs/5.1/utilities/flex/#justify-content
+            link: https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content
         -->
         <div class="container d-md-flex py-3 align-items-center">
             <!--
                     .text-center => Center aligned text on all viewport sizes
                     .text-md-start => Start aligned text on viewports sized MD (medium) or wider.
-                    link: https://getbootstrap.com/docs/5.1/utilities/text/#text-alignment
+                    link: https://getbootstrap.com/docs/5.2/utilities/text/#text-alignment
             -->
             <article class="text-center text-md-start">
                 <h1>Web Developer</h1>
                 <!--
                         Lead:
                         Make a paragraph stand out by adding .lead
-                        link: https://getbootstrap.com/docs/5.1/content/typography/#lead
+                        link: https://getbootstrap.com/docs/5.2/content/typography/#lead
                     -->
                 <p class="lead">The Web Development 8-month program provides you with the necessary skills and
                     training to enter
@@ -154,19 +154,19 @@
                 This applies max-width: 100%; and height: auto; to the image
 
                 so that it scales with the parent element
-                BS: https://getbootstrap.com/docs/5.1/content/images/#responsive-images
+                BS: https://getbootstrap.com/docs/5.2/content/images/#responsive-images
 
                 Sizing
                 Easily make an element as wide or as tall with our width and height utilities
                 using: w-50 and w-100
-                BS: https://getbootstrap.com/docs/5.1/utilities/sizing/#relative-to-the-parent
+                BS: https://getbootstrap.com/docs/5.2/utilities/sizing/#relative-to-the-parent
 
                 using
                 .rounded-circle
                 .rounded
                 .rounded-pill
                 to add rounded corners:
-                link: https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius
+                link: https://getbootstrap.com/docs/5.2/utilities/borders/#border-radius
             -->
             <img src="images/programmer.jpg" alt="Female Programmer"
                 class="w-50 img-fluid rounded d-none d-sm-block mx-3">
@@ -188,7 +188,7 @@
                 as it’s effectively the same as .gap-0.
                 ......
                 gap-2 => 2 points gap
-                https://getbootstrap.com/docs/5.1/utilities/spacing/#gap
+                https://getbootstrap.com/docs/5.2/utilities/spacing/#gap
             -->
         <div class="row text-center gap-2">
             <!--
@@ -202,7 +202,7 @@
                 <!-- One of three columns -->
                 <!--
                         Inside each column, we can add BS component "Card" to make it looks nice!
-                        link: https://getbootstrap.com/docs/5.1/components/card/
+                        link: https://getbootstrap.com/docs/5.2/components/card/
                 -->
                 <div class="card bg-light bg-gradient">
                     <!--
@@ -225,7 +225,7 @@
                         fs-1 => font size 1 (large as heading 1)
                         .....
                         fs-6 => font size 6 (small as heading 6)
-                        link: https://getbootstrap.com/docs/5.1/utilities/text/#font-size
+                        link: https://getbootstrap.com/docs/5.2/utilities/text/#font-size
 
                         So you can use font-size and color to change the icon appearance.
                         Example:
@@ -292,7 +292,7 @@
                 - using .col-lg => layout the column horizontally only on large screens and above
                 
                 Background gradient
-                link: https://getbootstrap.com/docs/5.1/utilities/background/#background-gradient
+                link: https://getbootstrap.com/docs/5.2/utilities/background/#background-gradient
             -->
             <div class="col-md border border-secondary rounded-3 bg-light p-2">
                 <h3>Front-End Development</h3>
@@ -362,10 +362,10 @@
                 <!--
                     Inside each column, 
                     we will also add BS component "Card" as we did before
-                    link: https://getbootstrap.com/docs/5.1/components/card/
+                    link: https://getbootstrap.com/docs/5.2/components/card/
 
                     The initial template
-                    link: https://getbootstrap.com/docs/5.1/components/card/#images
+                    link: https://getbootstrap.com/docs/5.2/components/card/#images
 
                     I removed the initial inline style => style="width: 18rem;"
                     from div.card
@@ -379,13 +379,13 @@
                         .rounded-circle => Adding rounded border for the image
                         link: https://www.w3schools.com/bootstrap5/bootstrap_images.php
 
-                        link: https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius
+                        link: https://getbootstrap.com/docs/5.2/utilities/borders/#border-radius
 
                         * .w-75 is a bootstrap utility class to set the image to be 75% of its container (the parent element)
-                        link: https://getbootstrap.com/docs/5.1/utilities/sizing/
+                        link: https://getbootstrap.com/docs/5.2/utilities/sizing/
 
                         .card-img-top places an image to the top of the card
-                        link: https://getbootstrap.com/docs/5.1/components/card/#images
+                        link: https://getbootstrap.com/docs/5.2/components/card/#images
 
                         .m-auto => set margin for all side to auto to center the image
                         for all screens
@@ -511,10 +511,10 @@
                 In small screen and less, we want to display them vertically
 
                 But we designed the input group based on these General rules:
-                link: https://getbootstrap.com/docs/5.1/forms/input-group/
+                link: https://getbootstrap.com/docs/5.2/forms/input-group/
 
                 For this specific sample:
-                link: https://getbootstrap.com/docs/5.1/forms/input-group/#button-addons
+                link: https://getbootstrap.com/docs/5.2/forms/input-group/#button-addons
             -->
                 <input type="text" class="form-control" placeholder="Your Email" aria-label="Recipient's username"
                     aria-describedby="Recipient's username">
