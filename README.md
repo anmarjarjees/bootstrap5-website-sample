@@ -31,15 +31,12 @@ Throughout this project, I have added a list of .html files as shown in the list
 
 Check ["The live website"](https://anmarjarjees.github.io/bootstrap5-website-sample/)
 
-The Main Resources:
+**The Main Resources:**
 * Bootstrap:
     * https://getbootstrap.com/
 
 * W3Schools:
     * https://www.w3schools.com/bootstrap5/index.php
-
-* Tutorial Republic:
-    * https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/
 
 * BeFunky: Free online photo editor
     * the online photo editor: https://www.befunky.com/create/
